@@ -6,7 +6,7 @@ Includes homepage, new arrivals, collections with sliders, gallery with lightbox
 ## 📸 Screenshot
 ![Fashion Hub Screenshot](images/screenshot.png)
 
-*(Replace `images/screenshot.png` with the actual path to your screenshot.)*
+
 
 ## 🚀 Features
 - Responsive homepage layout  
