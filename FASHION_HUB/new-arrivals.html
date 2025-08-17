@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fashion Hub - New Arrivals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+let currentGroup = [];
+let currentIndex = 0;
+
+function openLightbox(img) {
+  // get parent group of clicked image
+  currentGroup = Array.from(img.parentElement.querySelectorAll("img"));
+  currentIndex = currentGroup.indexOf(img);
+
+  document.getElementById("lightbox").style.display = "flex";
+  showSlide();
+}
+
+function showSlide() {
+  document.getElementById("lightbox-img").src = currentGroup[currentIndex].src;
+}
+
+function changeSlide(n) {
+  currentIndex += n;
+  if (currentIndex < 0) currentIndex = currentGroup.length - 1;
+  if (currentIndex >= currentGroup.length) currentIndex = 0;
+  showSlide();
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+
+<body>
+
+
+  <header>New Arrivals</header>
+
+<nav>
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="new-arrivals.html"><i class="fa-solid fa-shirt"></i> New Arrivals</a>
+  <a href="collections.html"><i class="fa-solid fa-bag-shopping"></i> Collections</a>
+  <a href="gallery.html"><i class="fa-solid fa-camera"></i> Gallery</a>
+  <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+</nav>
+
+
+ <main>
+  <h1>Weekly New Arrivals</h1>
+  <p>Fresh styles updated every week.</p>
+
+  <div class="arrivals-grid">
+    <!-- Summer Dresses -->
+    <div class="card">
+      <div class="card-images">
+        <img src="images/summer-1.png" alt="Summer Dress 1" onclick="openLightbox(this)">
+        <img src="images/summer-2.png" alt="Summer Dress 2" onclick="openLightbox(this)">
+        <img src="images/summer-3.png" alt="Summer Dress 3" onclick="openLightbox(this)">
+      </div>
+      <h3><i class="fa-solid fa-shirt"></i> Summer Dresses</h3>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+
+    <!-- Classic Heels -->
+    <div class="card">
+      <div class="card-images">
+        <img src="images/heels-1.png" alt="Classic Heels 1" onclick="openLightbox(this)">
+        <img src="images/heels-2.png" alt="Classic Heels 2" onclick="openLightbox(this)">
+        <img src="images/heels-3.png" alt="Classic Heels 3" onclick="openLightbox(this)">
+      </div>
+      <h3><i class="fa-solid fa-shoe-prints"></i> Classic Heels</h3>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+
+    <!-- Designer Bags -->
+    <div class="card">
+      <div class="card-images">
+        <img src="images/bag-1.png" alt="Designer Bag 1" onclick="openLightbox(this)">
+        <img src="images/bag-2.png" alt="Designer Bag 2" onclick="openLightbox(this)">
+        <img src="images/bag-3.png" alt="Designer Bag 3" onclick="openLightbox(this)">
+      </div>
+      <h3><i class="fa-solid fa-bag-shopping"></i> Designer Bags</h3>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+
+
+
+
+  <footer>&copy; 2025 Fashion Hub.</footer>
+</body>
+</html>
