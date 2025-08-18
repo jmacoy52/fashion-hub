@@ -18,7 +18,7 @@ Includes homepage, new arrivals, collections with sliders, gallery with lightbox
 ## 🛠️ Technologies Used
 - HTML5  
 - CSS3 (Flexbox & Grid)  
-- JavaScript (sliders + lightbox)  
+- JavaScript (for sliders + lightbox only)  
 - Font Awesome icons  
 
 ## 📂 Project Structure
