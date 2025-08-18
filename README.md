@@ -4,7 +4,7 @@ A simple fashion e-commerce front-end built with **HTML, CSS, and JavaScript**.
 Includes homepage, new arrivals, collections with sliders, gallery with lightbox preview, and a responsive layout.  
 
 ## 📸 Screenshot
-![Fashion Hub Screenshot](images/screenshot.png)
+![Fashion Hub Screenshot](screenshot.png)
 
 
 
